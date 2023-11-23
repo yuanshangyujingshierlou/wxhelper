@@ -11,6 +11,10 @@ enable_language(ASM_MASM)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
+set(DETOURS_INCLUDE_DIRS "D:/vcpkg/installed/x64-windows/include")
+set(DETOURS_LIBRARY "D:/vcpkg/installed/x64-windows/debug/lib/detours.lib")
+set(CMAKE_PREFIX_PATH "D:/vcpkg/installed/x64-windows/share/nlohmann_json")
+
 
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /D '_UNICODE' /D 'UNICODE' ")
@@ -28,7 +32,6 @@ add_subdirectory(spdlog)
 add_subdirectory(source)
 
 # find_package(spdlog CONFIG REQUIRED)
-
 find_package(nlohmann_json CONFIG REQUIRED)
 
 find_path(DETOURS_INCLUDE_DIRS "detours/detours.h")
